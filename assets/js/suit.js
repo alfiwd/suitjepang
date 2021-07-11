@@ -81,6 +81,7 @@ batu.addEventListener("click", function () {
 
   hasilPlayer.innerHTML = "Kamu Memilih " + pilihanPlayer + " " + gambarPlayer;
   hasilComputer.innerHTML = "Komputer Memilih " + " ";
+  hasil.innerHTML = "";
   putarGambar();
   setTimeout(function () {
     hasilComputer.innerHTML = "Komputer Memilih " + pilihanKomputer + " " + gambarComputer;
@@ -101,6 +102,7 @@ gunting.addEventListener("click", function () {
 
   hasilPlayer.innerHTML = "Kamu Memilih " + pilihanPlayer + " " + gambarPlayer;
   hasilComputer.innerHTML = "Komputer Memilih " + " ";
+  hasil.innerHTML = "";
   putarGambar();
   setTimeout(function () {
     hasilComputer.innerHTML = "Komputer Memilih " + pilihanKomputer + " " + gambarComputer;
@@ -121,6 +123,7 @@ kertas.addEventListener("click", function () {
 
   hasilPlayer.innerHTML = "Kamu Memilih " + pilihanPlayer + " " + gambarPlayer;
   hasilComputer.innerHTML = "Komputer Memilih " + " ";
+  hasil.innerHTML = "";
   putarGambar();
   setTimeout(function () {
     hasilComputer.innerHTML = "Komputer Memilih " + pilihanKomputer + " " + gambarComputer;
@@ -144,17 +147,17 @@ tombolSelesai.addEventListener("click", function () {
   const konfirmasi = confirm("Apakah ingin menyelesaikan permainan?");
   if (konfirmasi == true) {
     if (scoreAngkaPlayer > scoreAngkaComputer) {
-      alert("Selamat kamu memenangkan pertandingan!!!");
+      alert("Selamat kamu memenangkan pertandingan!!!\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
       reset();
       containerAwal.classList.toggle("off");
       off.classList.toggle("main");
     } else if (scoreAngkaPlayer < scoreAngkaComputer) {
-      alert("Yahhh, kamu kalah dalam pertandingan...");
+      alert("Yahhh, kamu kalah dalam pertandingan...\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
       reset();
       containerAwal.classList.toggle("off");
       off.classList.toggle("main");
     } else {
-      alert("Huuuhh, hasilnya seri");
+      alert("Huuuhh, hasilnya seri\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
       reset();
       containerAwal.classList.toggle("off");
       off.classList.toggle("main");

@@ -42,7 +42,7 @@ h1 {
 .tampilan-awal {
   background-color: #e6eddf;
   text-align: center;
-  width: 85%;
+  width: fit-content;
   border-radius: 3rem;
   margin: 1rem auto 1rem auto;
   padding: 0rem, 2rem, 1rem, 2rem;
@@ -51,7 +51,13 @@ h1 {
   box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.7);
 }
 .tampilan-awal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   opacity: 1;
+  width: fit-content;
   margin-top: 11.8rem;
   padding-top: 1rem;
   padding-bottom: 1px;
