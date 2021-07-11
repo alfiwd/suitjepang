@@ -5,9 +5,13 @@ const scorePlayer = document.querySelector(".angkaPlayer");
 const scoreComputer = document.querySelector(".angkaComputer");
 const tombolReset = document.querySelector(".reset");
 const tombolSelesai = document.querySelector(".selesai");
+const tombolMulai = document.querySelector(".tombol-mulai");
+const containerAwal = document.querySelector(".container-awal");
 var hasilPlayer = document.querySelector(".hasilPlayer");
 var hasilComputer = document.querySelector(".hasilComputer");
 var hasil = document.querySelector(".hasil");
+var off = document.querySelector(".off");
+var on = document.querySelector(".on");
 var scoreAngkaPlayer = 0;
 var scoreAngkaComputer = 0;
 
@@ -64,6 +68,10 @@ function reset() {
   hasil.innerHTML = "";
 }
 
+tombolMulai.addEventListener("click", function () {
+  off.classList.toggle("main");
+  containerAwal.classList.toggle("off");
+});
 batu.addEventListener("click", function () {
   const pilihanKomputer = getPilihanComputer();
   const pilihanPlayer = batu.className;
@@ -138,12 +146,18 @@ tombolSelesai.addEventListener("click", function () {
     if (scoreAngkaPlayer > scoreAngkaComputer) {
       alert("Selamat kamu memenangkan pertandingan!!!");
       reset();
+      containerAwal.classList.toggle("off");
+      off.classList.toggle("main");
     } else if (scoreAngkaPlayer < scoreAngkaComputer) {
       alert("Yahhh, kamu kalah dalam pertandingan...");
       reset();
+      containerAwal.classList.toggle("off");
+      off.classList.toggle("main");
     } else {
       alert("Huuuhh, hasilnya seri");
       reset();
+      containerAwal.classList.toggle("off");
+      off.classList.toggle("main");
     }
   }
 });
