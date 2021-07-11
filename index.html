@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <title>Suit Jepang</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Game suit jepang" />
+    <meta name="author" content="Alfian Widitama" />
+    <meta name="developer" content="Alfian Widitama" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Permainan Suit Jepang</h1>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="game-area">
+            <div class="batu">
+              <img src="assets/img/batu.png" alt="gambar batu" class="img-fluid" />
+              <figcaption>Batu</figcaption>
+            </div>
+            <div class="gunting">
+              <img src="assets/img/gunting.png" alt="gambar gunting" class="img-fluid" />
+              <figcaption>Gunting</figcaption>
+            </div>
+            <div class="kertas">
+              <img src="assets/img/kertas.png" alt="gambar kertas" class="img-fluid" />
+              <figcaption>Kertas</figcaption>
+            </div>
+            <div class="hasilPlayer">Pilih Salah Satu Gambar Untuk Mulai...</div>
+            <div class="hasilComputer"></div>
+            <div class="hasil"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="score-area">
+            <h1>Score</h1>
+            <div class="scorePlayer">
+              <span>Kamu</span>
+              <div class="angkaPlayer">0</div>
+            </div>
+            <h2>VS</h2>
+            <div class="scoreComputer">
+              <span>Computer</span>
+              <div class="angkaComputer">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="tombol-area">
+            <div class="reset">Reset</div>
+            <div class="selesai">Selesaikan Permainan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/suit.js"></script>
+  </body>
+</html>
