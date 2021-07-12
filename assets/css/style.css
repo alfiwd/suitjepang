@@ -25,6 +25,10 @@ h1 {
   font-size: 4rem;
   font-weight: bold;
 }
+h2,
+figcaption {
+  font-weight: bold;
+}
 .off {
   opacity: 0;
 }
@@ -115,7 +119,10 @@ h2 {
   font-weight: bold;
   padding: 10px;
   margin: 0 20px 50px 20px;
-  border-radius: 20%;
+  border-radius: 15px;
+  width: 150px;
+  height: 60px;
+  line-height: 40px;
 }
 .reset {
   background-color: crimson;
@@ -125,7 +132,6 @@ h2 {
   background-color: limegreen;
 }
 .tombol-mulai {
-  width: 150px;
   margin: 0 auto 50px auto;
   border-radius: 15px;
 }

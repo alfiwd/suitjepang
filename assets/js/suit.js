@@ -76,6 +76,7 @@ function klik() {
 tombolMulai.addEventListener("click", function () {
   off.classList.toggle("main");
   containerAwal.classList.toggle("off");
+  hasilPlayer.innerHTML = "Pilih Salah Satu Gambar Untuk Mulai...";
   klik();
   backsound.play();
 });
@@ -156,23 +157,27 @@ tombolReset.addEventListener("click", function () {
 });
 tombolSelesai.addEventListener("click", function () {
   klik();
-  const konfirmasi = confirm("Apakah ingin menyelesaikan permainan?");
-  if (konfirmasi == true) {
-    if (scoreAngkaPlayer > scoreAngkaComputer) {
-      alert("Selamat kamu memenangkan pertandingan!!!\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
-      reset();
-      containerAwal.classList.toggle("off");
-      off.classList.toggle("main");
-    } else if (scoreAngkaPlayer < scoreAngkaComputer) {
-      alert("Yahhh, kamu kalah dalam pertandingan...\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
-      reset();
-      containerAwal.classList.toggle("off");
-      off.classList.toggle("main");
-    } else {
-      alert("Huuuhh, hasilnya seri\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
-      reset();
-      containerAwal.classList.toggle("off");
-      off.classList.toggle("main");
+  if (hasilPlayer.innerHTML == "Pilih Salah Satu Gambar Untuk Mulai...") {
+    alert("Ups, kamu belum memilih pilihan\nPilih salah satu gambar untuk mulai");
+  } else {
+    const konfirmasi = confirm("Apakah ingin menyelesaikan permainan?");
+    if (konfirmasi == true) {
+      if (scoreAngkaPlayer > scoreAngkaComputer) {
+        alert("Selamat kamu memenangkan pertandingan!!!\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
+        reset();
+        containerAwal.classList.toggle("off");
+        off.classList.toggle("main");
+      } else if (scoreAngkaPlayer < scoreAngkaComputer) {
+        alert("Yahhh, kamu kalah dalam pertandingan...\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
+        reset();
+        containerAwal.classList.toggle("off");
+        off.classList.toggle("main");
+      } else {
+        alert("Huuuhh, hasilnya seri\nScore\nKamu : " + scoreAngkaPlayer + "\nComputer : " + scoreAngkaComputer);
+        reset();
+        containerAwal.classList.toggle("off");
+        off.classList.toggle("main");
+      }
     }
   }
 });
