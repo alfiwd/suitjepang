@@ -77,8 +77,6 @@ tombolMulai.addEventListener("click", function () {
   off.classList.toggle("main");
   containerAwal.classList.toggle("off");
   klik();
-  // const backsound = new Audio("assets/sound/backsound.mp3");
-  // backsound.play();
   backsound.play();
 });
 batu.addEventListener("click", function () {
