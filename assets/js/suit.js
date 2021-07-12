@@ -14,6 +14,7 @@ var off = document.querySelector(".off");
 var on = document.querySelector(".on");
 var scoreAngkaPlayer = 0;
 var scoreAngkaComputer = 0;
+var backsound = document.querySelector(".backsound");
 
 function getPilihanComputer() {
   const comp = Math.random();
@@ -67,10 +68,18 @@ function reset() {
   hasilComputer.innerHTML = "";
   hasil.innerHTML = "";
 }
+function klik() {
+  const klik = new Audio("assets/sound/click.wav");
+  klik.play();
+}
 
 tombolMulai.addEventListener("click", function () {
   off.classList.toggle("main");
   containerAwal.classList.toggle("off");
+  klik();
+  // const backsound = new Audio("assets/sound/backsound.mp3");
+  // backsound.play();
+  backsound.play();
 });
 batu.addEventListener("click", function () {
   const pilihanKomputer = getPilihanComputer();
@@ -79,6 +88,7 @@ batu.addEventListener("click", function () {
   const gambarPlayer = getGambar(pilihanPlayer);
   const gambarComputer = getGambar(pilihanKomputer);
 
+  klik();
   hasilPlayer.innerHTML = "Kamu Memilih " + pilihanPlayer + " " + gambarPlayer;
   hasilComputer.innerHTML = "Komputer Memilih " + " ";
   hasil.innerHTML = "";
@@ -100,6 +110,7 @@ gunting.addEventListener("click", function () {
   const gambarPlayer = getGambar(pilihanPlayer);
   const gambarComputer = getGambar(pilihanKomputer);
 
+  klik();
   hasilPlayer.innerHTML = "Kamu Memilih " + pilihanPlayer + " " + gambarPlayer;
   hasilComputer.innerHTML = "Komputer Memilih " + " ";
   hasil.innerHTML = "";
@@ -121,6 +132,7 @@ kertas.addEventListener("click", function () {
   const gambarPlayer = getGambar(pilihanPlayer);
   const gambarComputer = getGambar(pilihanKomputer);
 
+  klik();
   hasilPlayer.innerHTML = "Kamu Memilih " + pilihanPlayer + " " + gambarPlayer;
   hasilComputer.innerHTML = "Komputer Memilih " + " ";
   hasil.innerHTML = "";
@@ -136,6 +148,7 @@ kertas.addEventListener("click", function () {
   }, 1000);
 });
 tombolReset.addEventListener("click", function () {
+  klik();
   const konfirmasi = confirm("Apakah ingin reset permainan?");
   if (konfirmasi == true) {
     reset();
@@ -144,6 +157,7 @@ tombolReset.addEventListener("click", function () {
   }
 });
 tombolSelesai.addEventListener("click", function () {
+  klik();
   const konfirmasi = confirm("Apakah ingin menyelesaikan permainan?");
   if (konfirmasi == true) {
     if (scoreAngkaPlayer > scoreAngkaComputer) {
